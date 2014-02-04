@@ -28,6 +28,11 @@
 		<!--[if lt IE 9]>
 		<script src="lib/js/html5shiv.js"></script>
 		<![endif]-->
+		
+		<style>
+			.half { width: 40%; margin: 0 5%;}
+			strong { color: #13DAEC; }
+		</style>
 	</head>
 
 	<body>
@@ -37,16 +42,29 @@
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 				<section>
-					<h1>SASS</h1>
-					<h3></h3>
+					<h1>Sass</h1>
+					<h3>Syntactically Awesome Stylesheets</h3>
 					<p>
 						<small>Created by <a href="http://troutacular.github.io">Jason Cauwels</a> / <a href="http://twitter.com/troutacular">@troutacular</a></small>
 					</p>
 				</section>
 				
 				<section>
+					<h2>What is Sass?</h2>
+					<blockquote cite="http://bkaprt.com/sass/4/">
+						Sass is a meta-language on top of CSS that’s used to describe the style of a document cleanly and structurally, with more power than flat CSS allows. Sass both provides a simpler, more elegant syntax for CSS and implements various features that are useful for creating manageable stylesheets.
+					</blockquote>
+				</section>
+				
+				<section>
+					<h2>English version</h2>
+					<p>Write stylesheets that are readable by humans but compile for computers to read quickly.</p>
+					<p>You can use variables and mixins for common written items, separate files for themes, modules, styleguides.</p>
+				</section>
+				
+				<section>
 					<h2>Does this benefit front-end development?</h2>
-					<p class="fragment">Yes!  That's why I made this presentation!</p>
+					<p class="fragment">Yes!  That's why I made this presentation.</p>
 				</section>
 
 				<section>
@@ -57,66 +75,253 @@
 								<li class="fragment">There are several books on Sass</li>
 							</ul>
 						</li>
-						<li class="fragment">The web community is using them
-							<ul>
-								<li class="fragment">Take a look at Git Repos, many have sass files</li>
-							</ul></li>
-						<li class="fragment">CSS is considering adding this as a core module</li>
+						<li class="fragment">The web community is already using them</li>
+						<li class="fragment">SCSS is CSS so you can start using it right away and optimize later</li>
+						<li class="fragment">Mixins & Variables</li>
 					</ul>
-
-					<aside class="notes">
-						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
-					</aside>
 				</section>
 				
 				<section>
+					<h2>Does this benefit more than the front-end?</h2>
+					<p class="fragment">Yes! And not just for geeky reasons.</p>
+				</section>
+					
+				<section>
 					
 					<section>
-						<h2>But does this benefit my Department?</h2>
-						<p class="fragment">Yes!  Agin, that's why I made this presentation!</p>
+						<h2>Server Benefits</h2>
 					</section>
 					
 					<section>
-						<h2>Server Benefit</h2>
+						<h2>Reduces server calls</h2>
+							<ul>
+								<li class="fragment">Old Method (4 server calls)
+									<pre><code contenteditable>
+<link rel="stylesheet" href="styleguide.css" />
+<link rel="stylesheet" href="modules.css" />
+<link rel="stylesheet" href="component.css" />
+<link rel="stylesheet" href="plugin.css" />
+									</code></pre>
+								</li>
+								<li class="fragment">New Method (1 server call)
+									<pre><code contenteditable>
+// file.scss compiles to file.css
+@import 'styleguide';
+@import 'modules';
+@import 'component';
+@import 'plugin';
+									</code></pre>
+									<pre><code contenteditable>
+<link rel="stylesheet" href="file.css" />
+									</code></pre>
+									
+								</li>
+							</ul>
+					</section>
+					
+					<section>
+						<h2>Compile on the Fly</h2>
+						<p class="fragment">File compilation happens every time you save the file while watching your directory in the command line:
+							<pre class="fragment"><code contenteditable>
+// sass
+$ sass --watch screen.scss:screen.css
+
+// compass
+$ compass watch
+							</code></pre>
+						</p>
 						<ul>
-							<li class="fragment">Reduces server calls
+							<li class="fragment">Smaller file size for faster loading</li>
+							<li class="fragment">Maintain working Scss files that are human readable</li>
+							<li class="fragment">Divide your project into modular development and reusable components</li>
+							<li class="fragment">Link countless framework files, <strong>Sass only includes the elements used</strong></li>
+						</ul>
+					</section>
+					
+					<section data-transition="linear" data-background="#990000" data-background-transition="slide">
+						<h2>GAAAAHHHH!</h2>
+						<h3>COMMAND LINE!!!!!!</h3>
+					</section>
+					
+					<section>
+						<h2>That's alright</h2>
+						<p>We won't go into why you should use the command line <strong style="display:block;" class="fragment">besides to geek out</strong></p>
+						<p class="fragment">There are several apps available to watch your files</p>
+						<ul class="fragment">
+							<li>Scout: Mac/Win</li>
+							<li>CodeKit: Mac</li>
+							<li>LiveReload: Mac/Win</li>
+							<li>Compass.app: Mac/Win/Linux</li>
+							<li>Koala: Mac</li>
+						</ul>
+					</section>
+					
+					<section>
+						<h2>Output Styles</h2>
+						<p>There are several output styles that you can set in your config.rb</p>
+						<ul class="fragement">
+							<li>Nested</li>
+							<li>Expanded</li>
+							<li>Compact</li>
+							<li>Compressed</li>
+						</ul>
+					</section>
+					
+					<section>
+						<h2>Where is that style coming from ? (!!!!!)</h2>
+						<p class="fragment">You don't have to search, just add line comments</p>
+						<pre class="fragment"><code contenteditable>
+// config.rb
+line_comments = true
+output_style = :expanded
+						</code></pre>
+						<pre class="fragment"><code contenteditable>
+/* line 1, ../sass/screen.scss */
+ol {
+  margin: 0;
+}
+/* line 3, ../sass/screen.scss */
+ol li {
+  list-style: none;
+}
+/* line 5, ../sass/screen.scss */
+ol li p {
+  color: #990000;
+}
+						</code></pre>
+					</section>
+					
+					<section>
+						<h2>Why does Output matter?</h2>
+						<p>I took some files written in Scss:</p>
+						<ul>
+							<li class="fragment">File 1
 								<ul>
-									<li class="fragment">Old Method
-										<pre><code contenteditable>
-<link rel="stylesheet" href="styleguide.css">
-<link rel="stylesheet" href="modules.css">
-<link rel="stylesheet" href="component.css">
-<link rel="stylesheet" href="plugin.css">
-										</code></pre>
-									</li>
+									<li>Nested: 34kb</li>
+									<li>Compressed: 23kb</li>
+									<li class="fragment"><strong>Savings: 32%</strong></li>
+								</ul>
+							</li>
+							<li class="fragment">File 2
+								<ul>
+									<li>Nested: 63kb</li>
+									<li>Compressed: 39kb</li>
+									<li class="fragment"><strong>Savings: 38%</strong></li>
 								</ul>
 							</li>
 						</ul>
 					</section>
 					
+					
 				</section>
-
-				<section>
-					<h2>Pretty Code</h2>
-					<pre><code data-trim contenteditable>
-						function linkify( selector ) {
-						  if( supports3DTransforms ) {
-						
-						    var nodes = document.querySelectorAll( selector );
-						
-						    for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
-						      var node = nodes[i];
-						
-						      if( !node.className ) {
-						        node.className += ' roll';
-						      }
-						    }
-						  }
-						}
-					</code></pre>
-				</section>
-
 				
+				<section>
+					
+					<section>
+						<h2>Design Benefits</h2>
+					</section>
+					
+					<section>
+						<h2>Variables</h2>
+						<p>One of the best reasons to use Sass.</p>
+						<pre><code contenteditable>
+// variables
+$color-cardinal: #990000;
+						</code></pre>
+						<pre><code contenteditable>
+// scss
+header {
+	background: $color-cardinal;
+}
+
+// css
+header {
+	background: #990000;
+}
+						</code></pre>
+					</section>
+					
+					<section>
+						<h2>Mixins</h2>
+						<p>Mixins allow us to write a function once, and reuse it as needed</p>
+						<pre><code contenteditable>
+// mixin
+@mixin border-radius($radius:5px) {
+	-moz-border-radius: $radius;
+	-webkit-border-radius: $radius;
+	-ms-border-radius: $radius;
+	border-radius: $radius;
+}
+						</code></pre>
+						<pre><code contenteditable>
+// scss
+.module {
+	@include border-radius();
+}
+
+// css
+.module {
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-ms-border-radius: 5px;
+	border-radius: 5px;
+}
+						</code></pre>
+					</section>
+					
+					<section>
+						<h2>Frameworks</h2>
+						<p>There are many supported frameworks available with documentation for usage:</p>
+						<ul>
+							<li><strong>Compass:</strong> adds nested rules, variables, mixins, selector inheritance, and more.</li>
+							<li><strong>Susy:</strong> Responsive grids for Compass</li>
+							<li><strong>Bourbon:</strong> simple and lightweight mixin library for Sass</li>
+						</ul>
+					</section>
+							
+					
+					<section>
+						<h2>Styleguides</h2>
+						<p>Modular development means we can separate template, module and style guide files for ease of editing.</p>
+						<pre><code contenteditable>
+@import '../global/sass/compass';
+@import '../global/sass/mixins';
+@import 'variables';
+@import 'modules';
+@import 'grid';
+@import 'styleguide';
+						</code></pre>
+						<pre><code contenteditable>
+// modules
+@import '../global/sass/modules';
+/* projet module items */
+						</code></pre>
+						<p class="fragment">Include global elements in your local elements or don't write them specifically for that project.  <strong>No more having to overwrite global styles.</strong></p>
+					</section>
+					
+					<section>
+						<h2>Design Enhancements</h2>
+						<p>Reducing file size and server calls means we can allocate more room for site enhancements:</p>
+						<ul>
+							<li class="fragment">Web Fonts</li>
+							<li class="fragment">Icon Fonts</li>
+							<li class="fragment">Sprites on the fly from folder</li>
+							<li class="fragment">JavaScript features/effects</li>
+						</ul>
+					</section>
+					
+				</section>
+				
+				<section>
+					<h2>Marketable</h2>
+					<p>Learning this will make you marketable.</p>
+					<p class="fragment">We as a group need to be marketable to our clients.</p>
+					<p class="fragment"> We not only need to be competent in our industries but strive to be leaders in it.</p>
+				</section>
+				
+				<section>
+					<h2>Thank You</h2>
+				</section>
 
 			</div>
 
