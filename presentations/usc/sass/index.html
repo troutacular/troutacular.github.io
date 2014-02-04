@@ -50,16 +50,20 @@
 				</section>
 				
 				<section>
-					<h2>What is Sass?</h2>
-					<blockquote cite="http://bkaprt.com/sass/4/">
-						Sass is a meta-language on top of CSS that’s used to describe the style of a document cleanly and structurally, with more power than flat CSS allows. Sass both provides a simpler, more elegant syntax for CSS and implements various features that are useful for creating manageable stylesheets.
-					</blockquote>
-				</section>
 				
-				<section>
-					<h2>English version</h2>
-					<p>Write stylesheets that are readable by humans but compile for computers to read quickly.</p>
-					<p>You can use variables and mixins for common written items, separate files for themes, modules, styleguides.</p>
+					<section>
+						<h2>What is Sass?</h2>
+						<blockquote cite="http://bkaprt.com/sass/4/">
+							Sass is a meta-language on top of CSS that’s used to describe the style of a document cleanly and structurally, with more power than flat CSS allows. Sass both provides a simpler, more elegant syntax for CSS and implements various features that are useful for creating manageable stylesheets.
+						</blockquote>
+					</section>
+					
+					<section>
+						<h2>English version</h2>
+						<p>Write stylesheets that are readable by humans but compile for computers to read quickly.</p>
+						<p>You can use variables and mixins for common written items, separate files for themes, modules, styleguides.</p>
+					</section>
+				
 				</section>
 				
 				<section>
@@ -168,6 +172,27 @@ $ compass watch
 					</section>
 					
 					<section>
+						<h2>Why does Output matter?</h2>
+						<p>I took some files written in Scss:</p>
+						<ul>
+							<li class="fragment">File 1
+								<ul>
+									<li>Nested: 34kb</li>
+									<li>Compressed: 23kb</li>
+									<li class="fragment"><strong>Savings: 32%</strong></li>
+								</ul>
+							</li>
+							<li class="fragment">File 2
+								<ul>
+									<li>Nested: 63kb</li>
+									<li>Compressed: 39kb</li>
+									<li class="fragment"><strong>Savings: 38%</strong></li>
+								</ul>
+							</li>
+						</ul>
+					</section>
+					
+					<section>
 						<h2>Where is that style coming from ? (!!!!!)</h2>
 						<p class="fragment">You don't have to search, just add line comments</p>
 						<pre class="fragment"><code contenteditable>
@@ -189,27 +214,6 @@ ol li p {
   color: #990000;
 }
 						</code></pre>
-					</section>
-					
-					<section>
-						<h2>Why does Output matter?</h2>
-						<p>I took some files written in Scss:</p>
-						<ul>
-							<li class="fragment">File 1
-								<ul>
-									<li>Nested: 34kb</li>
-									<li>Compressed: 23kb</li>
-									<li class="fragment"><strong>Savings: 32%</strong></li>
-								</ul>
-							</li>
-							<li class="fragment">File 2
-								<ul>
-									<li>Nested: 63kb</li>
-									<li>Compressed: 39kb</li>
-									<li class="fragment"><strong>Savings: 38%</strong></li>
-								</ul>
-							</li>
-						</ul>
 					</section>
 					
 					
