@@ -30,8 +30,10 @@
 		<![endif]-->
 		
 		<style>
-			.half { width: 40%; margin: 0 5%;}
 			strong { color: #13DAEC; }
+			.reveal pre { word-wrap: break-word; }
+			.reveal pre code { word-wrap: break-word; word-break: normal; }
+			.reveal pre.half { width: 48%; margin: 0 1%; float: left;  }
 		</style>
 	</head>
 
@@ -73,14 +75,14 @@
 						<pre class="fragment"><code contenteditable>
 // scss
 p {
-	margin: 0;
-	padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 // sass
 p
-	margin: 0
-	padding: 0
+  margin: 0
+  padding: 0
 						</code></pre>
 						<p class="fragment">For this discussion we will focus on SCSS</p>
 						
@@ -172,6 +174,80 @@ p
 							<li class="fragment">Divide your project into modular development and reusable components</li>
 							<li class="fragment">Link countless framework files, <strong>SASS only includes the elements used</strong></li>
 						</ul>
+					</section>
+					
+					<section>
+						<h2>Smart Compilation</h2>
+						<p>SASS will not only compile on the fly but it will group elements in a smart way, not just stack what you write</p>
+						<pre class="fragment half"><code contenteditable>
+//less
+.module {
+  margin: 0;
+  padding: 1em;
+  background: white;
+  color: black;
+}
+.module-alert {
+  .module();
+  background: red;
+  color: white;
+}
+
+						</code></pre>
+						<pre class="fragment half"><code contenteditable>
+//sass
+.module {
+  margin: 0;
+  padding: 1em;
+  background: white;
+  color: black;
+}
+.module-alert {
+  @extend .module;
+  background: red;
+  color: white;
+}
+
+						</code></pre>
+					</section>
+					
+					<section>
+						<h2>Compilation Output</h2>
+						<pre class="half"><code contenteditable>
+//less
+.module {
+  margin: 0;
+  padding: 1em;
+  background: white;
+  color: black;
+}
+.module-alert {
+  margin: 0;
+  padding: 1em;
+  background: white;
+  color: black;
+  background: red;
+  color: white;
+}
+
+						</code></pre>
+						<pre class="fragment half"><code contenteditable>
+//sass
+.module, .module-alert {
+  margin: 0;
+  padding: 1em;
+  background: white;
+  color: black;
+}
+
+.module-alert {
+  background: red;
+  color: white;
+}
+
+						</code></pre>
+						<p class="fragment">Rather than duplicate the classes, SASS will combine elements that are common and separate the nuances</p>
+						<p class="fragment">And you can put the '@extend' anywhere in the declaration!</p>
 					</section>
 					
 					<section>
@@ -280,12 +356,12 @@ $color-cardinal: #990000;
 						<pre><code contenteditable>
 // scss
 header {
-	background: $color-cardinal;
+  background: $color-cardinal;
 }
 
 // css
 header {
-	background: #990000;
+  background: #990000;
 }
 						</code></pre>
 					</section>
@@ -293,27 +369,27 @@ header {
 					<section>
 						<h2>Mixins</h2>
 						<p>Mixins allow us to write a function once, and reuse it as needed</p>
-						<pre><code contenteditable>
+						<pre class="half"><code contenteditable>
 // mixin
 @mixin border-radius($radius:5px) {
-	-moz-border-radius: $radius;
-	-webkit-border-radius: $radius;
-	-ms-border-radius: $radius;
-	border-radius: $radius;
+  -moz-border-radius: $radius;
+  -webkit-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
 }
 						</code></pre>
-						<pre><code contenteditable>
+						<pre class="half"><code contenteditable>
 // scss
 .module {
-	@include border-radius();
+  @include border-radius();
 }
 
 // css
 .module {
-	-moz-border-radius: 5px;
-	-webkit-border-radius: 5px;
-	-ms-border-radius: 5px;
-	border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
 }
 						</code></pre>
 					</section>
