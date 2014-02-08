@@ -87,7 +87,7 @@ p
 						<p class="fragment">For this discussion we will focus on SCSS</p>
 						
 						<aside class="notes">
-							SASS is based off of Ruby so SASS markup will look familiar to Ruby and Python developers. 
+							SASS syntax comes from Ruby and Python whereas SCSS is a superset of CSS so any valid CSS document is valid SCSS. 
 						</aside>
 					</section>
 				</section>
@@ -120,6 +120,9 @@ p
 						<li class="fragment">Separate CSS based on type or usage</li>
 						<li class="fragment">Build reusable components/modules</li>
 						<li class="fragment">Deploy sites faster</li>
+						<li class="fragment">Create sprites on the fly from a folder*
+							<p><small>* using Compass</small></p>
+						</li>
 					</ul>
 					<aside class="notes">
 						<p>Separate: we can make files for styleguides, variables, commonly used elements (mixins)</p>
@@ -245,9 +248,11 @@ p
   color: white;
 }
 
+
+
 						</code></pre>
 						<p class="fragment">Rather than duplicate the classes, SASS will combine elements that are common and separate the nuances</p>
-						<p class="fragment">And you can put the '@extend' anywhere in the declaration!</p>
+						<p class="fragment">And you can put the '@extend' <strong>anywhere</strong> in the declaration!</p>
 					</section>
 					
 					<section>
@@ -270,7 +275,7 @@ $ compass watch
 					
 					<section>
 						<h2>That's alright</h2>
-						<p>We won't go into why you should use the command line <strong style="display:block;" class="fragment">besides to geek out</strong></p>
+						<p>We won't go into why you should use the command line <strong style="display:block;" class="fragment">(besides to geek out)</strong></p>
 						<p class="fragment">There are several apps available to watch your files</p>
 						<ul class="fragment">
 							<li>Scout: Mac/Win</li>
@@ -284,7 +289,7 @@ $ compass watch
 					<section>
 						<h2>Output Styles</h2>
 						<p>There are several output styles that you can set in your config.rb</p>
-						<ul class="fragement">
+						<ul>
 							<li>Nested</li>
 							<li>Expanded</li>
 							<li>Compact</li>
@@ -296,14 +301,14 @@ $ compass watch
 						<h2>Why does Output matter?</h2>
 						<p>I took some files written in SCSS:</p>
 						<ul>
-							<li class="fragment">File 1
+							<li class="fragment">Sample file 1
 								<ul>
 									<li>Nested: 34kb</li>
 									<li>Compressed: 23kb</li>
 									<li class="fragment"><strong>Savings: 32%</strong></li>
 								</ul>
 							</li>
-							<li class="fragment">File 2
+							<li class="fragment">Sample file 2
 								<ul>
 									<li>Nested: 63kb</li>
 									<li>Compressed: 39kb</li>
@@ -432,16 +437,59 @@ header {
 							<li class="fragment">Icon Fonts</li>
 							<li class="fragment">Sprites on the fly from folder</li>
 							<li class="fragment">JavaScript features/effects</li>
+							<li class="fragment">'I have to have<strong>Fluffy Bunnies</strong> on my site'</li>
 						</ul>
 					</section>
 					
 				</section>
 				
 				<section>
-					<h2>Marketable</h2>
-					<p>Learning this will make you marketable.</p>
-					<p class="fragment">We as a group need to be marketable to our clients.</p>
-					<p class="fragment"> We not only need to be competent in our industries but strive to be leaders in it.</p>
+					
+					<section>
+						<h2>Take Aways</h2>
+					</section>
+					
+					<section>
+						<h2>Front-End</h2>
+						<ul>
+							<li class="fragment">Create modules and templates faster</li>
+							<li class="fragment">Maintain separate files for global usage</li>
+							<li class="fragment">Allow customized inheritance more easily</li>
+						</ul>
+					</section>
+					
+					<section>
+						<h2>Server</h2>
+						<ul>
+							<li class="fragment">Reduce server calls</li>
+							<li class="fragment">Compile on the fly</li>
+							<li class="fragment">Smart compilation for reduced file size</li>
+							<li class="fragment">Maintain global modules with less overhead</li>
+						</ul>
+					</section>
+					
+					<section>
+						<h2>Managers</h2>
+						<ul>
+							<li class="fragment">Prototype quickly in code and show clients</li>
+							<li class="fragment">Complete faster sites in less time</li>
+							<li class="fragment">Allow more enhancements</li>
+							<li class="fragment"><strong>Fluffy Bunnies!</strong></li>
+						</ul>
+					</section>
+					
+					<section>
+						<h2>Marketable</h2>
+						<ul>
+							<li class="fragment">Learning this will make you marketable</li>
+							<li class="fragment">We as a group need to be marketable to our clients</li>
+							<li class="fragment">We not only need to be competent in our industry but strive to be leaders in it</li>
+						</ul>
+						<aside class="notes">
+							Marketable doesn't mean we're looking for jobs.  It means we value being at the forefront and having outside vendors trying to emulate us rather than the reverse.
+						</aside>
+					</section>
+					
 				</section>
 				
 				<section>
