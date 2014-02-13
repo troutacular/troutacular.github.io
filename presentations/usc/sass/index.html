@@ -395,7 +395,7 @@ header {
 						<p>Mixins allow us to write a function once, and reuse it as needed</p>
 						<pre class="half"><code contenteditable>
 // mixin
-@mixin border-radius($radius:5px) {
+@mixin rounded($radius:5px) {
   -moz-border-radius: $radius;
   -webkit-border-radius: $radius;
   -ms-border-radius: $radius;
@@ -405,7 +405,10 @@ header {
 						<pre class="half"><code contenteditable>
 // scss
 .module {
-  @include border-radius();
+  @include rounded();
+}
+.module-alt {
+  @inlcude rounded(10);
 }
 
 // css
@@ -414,6 +417,12 @@ header {
   -webkit-border-radius: 5px;
   -ms-border-radius: 5px;
   border-radius: 5px;
+}
+.module-alt {
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -ms-border-radius: 10px;
+  border-radius: 10px;
 }
 						</code></pre>
 					</section>
