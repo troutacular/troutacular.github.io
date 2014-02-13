@@ -1,0 +1,14 @@
+.module-alert {
+  margin: 0;
+  padding: 1em;
+  background: white;
+  color: black;
+  background: red;
+  color: white;
+}
+.module {
+  margin: 0;
+  padding: 1em;
+  background: white;
+  color: black;
+}
