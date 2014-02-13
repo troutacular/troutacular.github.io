@@ -128,6 +128,7 @@ p
 						<p>Separate: we can make files for styleguides, variables, commonly used elements (mixins)</p>
 						<p>Modules: reuse snippets of code and maintain them from one source rather than copy/paste and hope to find for changes/updates</p>
 						<p>Deploy: using frameworks we can write less code quickly but maintain global and local requirements more effectively</p>
+						<p>Sprites: anyone create a sprite?  And then need to change it?</p>
 					</aside>
 				</section>
 				
@@ -215,6 +216,9 @@ p
 }
 
 						</code></pre>
+						<aside class="notes">
+							Here you can see the markup is basically the same with each codebase's nuance in code of css variable for LESS vs @extend for sass.
+						</aside>
 					</section>
 					
 					<section>
@@ -256,6 +260,10 @@ p
 						</code></pre>
 						<p class="fragment">Rather than duplicate the classes, SASS will combine elements that are common and separate the nuances</p>
 						<p class="fragment">And you can put the '@extend' <strong>anywhere</strong> in the declaration!</p>
+						<aside class="notes">
+							<p>The Less version puts the shared declaration in both styles - it repeats them.  Whereas SASS scans the document and combines the shared elements in one declaration and then writes the individual declarations afterwards.</p>
+							<p>This is important since the order you write them is not important - well it is for best practices - but SASS will fix it for you if CSS is not in your main wheelhouse.</p>
+						</aside>
 					</section>
 					
 					<section>
@@ -269,6 +277,9 @@ $ sass --watch screen.scss:screen.css
 $ compass watch
 							</code></pre>
 						</p>
+						<aside class="notes">
+							<p>SASS will watch your files from the command line</p>
+						</aside>
 					</section>
 					
 					<section data-transition="linear" data-background="#990000" data-background-transition="slide">
@@ -281,12 +292,15 @@ $ compass watch
 						<p>We won't go into why you should use the command line <strong style="display:block;" class="fragment">(besides to geek out)</strong></p>
 						<p class="fragment">There are several apps available to watch your files</p>
 						<ul class="fragment">
-							<li>Scout: Mac/Win</li>
-							<li>CodeKit: Mac</li>
-							<li>LiveReload: Mac/Win</li>
-							<li>Compass.app: Mac/Win/Linux</li>
-							<li>Koala: Mac</li>
+							<li><a href="http://mhs.github.io/scout-app/">Scout</a>: Mac/Win</li>
+							<li><a href="https://incident57.com/codekit/">CodeKit</a>: Mac</li>
+							<li><a href="http://livereload.com/">LiveReload</a>: Mac/Win</li>
+							<li><a href="http://compass.kkbox.com/">Compass.app</a>: Mac/Win/Linux</li>
+							<li><a href="http://koala-app.com/">Koala</a>: Mac</li>
 						</ul>
+						<aside class="notes">
+							<p>I have not reviewed each of these enough to give a recommendation so I suggest you try each one and see which one suites your development needs and/or preferences.</p>
+						</aside>
 					</section>
 					
 					<section>
@@ -372,6 +386,9 @@ header {
   background: #990000;
 }
 						</code></pre>
+						<aside class="notes">
+							<p>Variables: set colors or options as, well, a variable.  Write the variable once and re-use it throughout your code.  Have a change, update one place and save/recompile.</p>
+							<p>Mixins: Think of these as functions.  Ever changing css declarations and browser prefixes means we may, and probably will have over bloated code.  Writing a mixin, say for rounded corners, means that if we need to add/remove a prefix it can be done in one place.
 					</section>
 					
 					<section>
