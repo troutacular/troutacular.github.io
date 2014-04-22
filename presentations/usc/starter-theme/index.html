@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Starter Theme</title>
+
+		<meta name="description" content="New simple and stripped theme">
+		<meta name="author" content="Jason Cauwels">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="../../reveal.js/css/reveal.min.css">
+		<link rel="stylesheet" href="../../reveal.js/css/theme/default.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="../../reveal.js/lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="../../reveal.js/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+		
+		<style>
+			strong { color: #13DAEC; }
+			.reveal pre { word-wrap: break-word; }
+			.reveal pre code { word-wrap: break-word; word-break: normal; }
+			.reveal pre.half { width: 48%; margin: 0 1%; float: left;  }
+		</style>
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>Starter Theme</h1>
+					<h3>Baseplate to developing themes</h3>
+					<p>
+						<small>Created by <a href="http://troutacular.github.io">Jason Cauwels</a> / <a href="http://twitter.com/troutacular">@troutacular</a></small>
+					</p>
+					<aside class="notes">
+						hit 's' on your keyboard for notes 
+					</aside>
+				</section>
+				
+				<section>
+					<h2>What is it?</h2>
+					<p class="fragment">It is (becoming) a stripped down version of Underscores (_s).</p>
+					<p class="fragment">It will also grow with enhancements to our group added as we continue.</p>
+				</section>
+				
+				<section>
+					<h2>Goals</h2>
+					<p class="fragment">Primary goal will to have a base theme that we can take a snapshot of for development.</p>
+					<ul>
+						<li class="fragment">Functions and variables folder as main editing sections</li>
+						<li class="fragment">Well formed HTML outline/algorithm for site indexing and search (SEO)</li>
+						<li class="fragment">Faster deployments</li>
+					</ul>
+				</section>
+				
+				<section>
+					<h2>Functions</h2>
+					<p>Start including separate functions into functions file - just remove the call in the functions file</p>
+					<pre class="fragment"><code contenteditable>
+ - functions.php
+ - functions
+   |
+   |- breadcrumbs.php
+   |- footer-columns.php
+					</code></pre>
+				</section>
+				
+				<section>
+					<h2>Sass</h2>
+					<p class="fragment">Splitting elements into individual files/components</p>
+					<ul class="fragment half">
+						<li class="fragment">Styleguide</li>
+						<li class="fragment">Mixins
+							<ul>
+								<li class="fragment">Custom and WS Globals</li>
+							</ul>
+						</li>
+						<li class="fragment">Variables
+							<ul>
+								<li class="fragment">Colors and Variables</li>
+								<li class="fragment">Color palettes controlled in Variables!</li>
+							</ul>
+						</li>	
+					</ul>						
+				</section>
+				
+				<section>
+					<h2>Semantics</h2>
+					<p class="fragment">The framework thus far has a good semantic algorithmic outline.</p>
+					<p class="fragment">Theme Starter has the proper use of article, section, asides, div's, etc*</p>
+					<small class="fragment">* If not, note the change and it will be made</small>
+				</section>
+				
+				<section>
+					<h2>Big Changes</h2>
+					<ul>
+						<li class="fragment">Sass and Functions file structures
+							<ul>
+								<li class="fragment">Particularly Sass partials</li>
+							</ul>
+						</li>
+						<li class="fragment">Clean and precise selectors
+							<pre class="fragment"><code contenteditable>
+.class .sub-class {}
+.class .sub-class li {}
+————
+.class {}
+.sub-class {
+    /* notice this is not nested in .class */
+    li {}
+}
+
+/* also not */
+element1 .class1 .class2 element2 .class3 {}
+							</code></pre>
+						</li>
+				</section>
+					
+					
+					
+				
+				<section>
+					<h2>Thank You</h2>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="../../reveal.js/lib/js/head.min.js"></script>
+		<script src="../../reveal.js/js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Parallax scrolling
+				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				// parallaxBackgroundSize: '2100px 900px',
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: '../../reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: '../../reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../../reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../../reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: '../../reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: '../../reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
