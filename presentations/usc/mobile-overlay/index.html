@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Mobile Usability Area</title>
+
+		<meta name="description" content="New simple and stripped theme">
+		<meta name="author" content="Jason Cauwels">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="../../reveal.js/css/reveal.min.css">
+		<link rel="stylesheet" href="../../reveal.js/css/theme/default.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="../../reveal.js/lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="../../reveal.js/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+		
+		<style>
+			strong { color: #13DAEC; }
+			.reveal pre { word-wrap: break-word; }
+			.reveal pre code { word-wrap: break-word; word-break: normal; }
+			.reveal pre.half { width: 48%; margin: 0 1%; float: left;  }
+			.half { width: 48%; margin: 0 1%; float: left; }
+			.half img { max-height: 80%; width: auto; }
+			.third { width: 31%; margin: 0 1%; float: left;  }
+			.third img { max-height: 100%; width: auto; }
+		</style>
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>Mobile Usability Area</h1>
+					<h2>Introducing the 'OW' Zone</h2>
+					<p>
+						<small>Created by <a href="http://troutacular.github.io">Jason Cauwels</a> / <a href="http://twitter.com/troutacular">@troutacular</a></small>
+					</p>
+					<aside class="notes">
+						hit 's' on your keyboard for notes 
+					</aside>
+				</section>
+				
+				<section>
+					<h2>What is it?</h2>
+					<p class="fragment">There are usability studies done by Luke Wroblewski (and others) about the usability areas of the screen on a mobile device.</p>
+				</section>
+				
+				<section>
+					<h2>Goals</h2>
+					<p class="fragment">We, as a group, need to keep these usable areas in mind when creating our sites.</p>
+					<p class="fragment">We need to evaluate highly used elements and their placements:</p>
+					<ul>
+						<li class="fragment">Navigation / Menus</li>
+						<li class="fragment">Search</li>
+					</ul>
+				</section>
+				
+				<section>
+					
+					<section>
+						<h2>Some Examples</h2>
+					</section>
+					
+					<section>
+						<h2>Business Services</h2>
+						<p class="fragment third"><img src="images/iphone-5-bus-normal.jpg" />
+						<p class="fragment third"><img src="images/iphone-5-bus-overlay.jpg" />
+						<p class="fragment third"><img src="images/iphone-6-bus-overlay.jpg" />
+					</section>
+					
+					<section>
+						<h2>Dramatic Arts</h2>
+						<p class="fragment third"><img src="images/iphone-5-drama-normal.jpg" />
+						<p class="fragment third"><img src="images/iphone-5-drama-overlay.jpg" />
+						<p class="fragment third"><img src="images/iphone-6-drama-overlay.jpg" />
+					</section>
+					
+					<section>
+						<h2>ITS</h2>
+						<p class="fragment third"><img src="images/iphone-5-it-normal.jpg" />
+						<p class="fragment third"><img src="images/iphone-5-it-overlay.jpg" />
+						<p class="fragment third"><img src="images/iphone-6-it-overlay.jpg" />
+					</section>
+					
+					<section>
+						<h2>Pharmacy</h2>
+						<p class="fragment third"><img src="images/iphone-5-pharm-normal.jpg" />
+						<p class="fragment third"><img src="images/iphone-5-pharm-overlay.jpg" />
+						<p class="fragment third"><img src="images/iphone-6-pharm-overlay.jpg" />
+					</section>
+					
+				</section>
+				
+				<section>
+					<h2>Take Aways</h2>
+					<ul>
+						<li class="fragment">Experiment with different navigation placements</li>
+						<li class="fragment">When using interactions, be mindful of the device default functions
+							<ul class="fragment">
+								<li class="fragment">Sliders and the forward/back history</li>
+								<li class="fragment">Fixed headers/footers with scrolling content</li>
+							</ul>
+						</li>
+						<li class="fragment">It's a moving target - screen sizes change</li>
+						<li class="fragment">Test it (preferably on a device)</li>
+					</ul>
+				</section>
+				
+				<section>
+					<h2>Thank You</h2>
+					<p>Acknowledgements: <a href="http://www.lukew.com">Luke Wroblewski</a>, <a href="http://scotthurff.com/posts/how-to-design-for-thumbs-in-the-era-of-huge-screens">Scott Hurff</a></p>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="../../reveal.js/lib/js/head.min.js"></script>
+		<script src="../../reveal.js/js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Parallax scrolling
+				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				// parallaxBackgroundSize: '2100px 900px',
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: '../../reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: '../../reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../../reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../../reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: '../../reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: '../../reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
