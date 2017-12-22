@@ -1,7 +1,7 @@
 troutacular
 =====================
 
-Eventually I will fill this out and add something that isn't in a private repo.
+Eventually I will fill this out and add something that isn't in a private repo but for the meantime here is some boring history about me.
 
 
 ## About Me
