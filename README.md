@@ -21,26 +21,45 @@ I am always looking for a challenge and learning new technologies and methods.  
 
 ## Professional Experience
 
-
 ### Senior Developer
 _University of Southern California, Los Angeles, CA (2012-Present)_
 
-- Static WordPress deployment to AWS
-- Localist Calendar API Plugin
-- Develop custom WordPress sites in MU setup
-- Create and develop modular development and best practices
-- Custom parent/child theme for template and customized development
-- Create custom functions for site maintenance by client administration
+Provided comprehensive project initiatives and deliverables including web application development, DevOps integration, team coaching and mentoring, and service vendor selection and management.
+
+- Optimized and migrated homepage to static AWS instance that resulted in a 58% increase in performance
+- Developed custom web applications (PHP, JS, Node)
+- Constructed testing plans and CICD workflows for automated releases and increased frequency
+- Implemented WCAG/ADA/508 upgrades to web applications ensuring inclusive content and design
+- Evaluated application integrations and security reviews
+- Led development team through process improvements including coding standards adoption for quality control
+- Managed development standards and application integrity for three systems consisting of over 400 sites and 100+ applications
+- Sourced vendors and managed SaaS partnerships allowing focused development on core applications and feature development
+- Instituted development group meetings for collaboration, feature development, and training of team members
+- Participated in ITS/USC wide Culture and Change Management and Change Advisory Board
 
 #### Technologies/Coding
-AWS, CSS, Docker, ES5, ES6, HTML, Javascript, jQuery, Git, Gulp, Node, MySQL, PHP, SASS/LESS
+AWS, CSS, Docker, ES5, ES6, HTML, Javascript, Git, Gulp, Node, MySQL, PHP, React, Rest API, SASS/LESS
 
 #### Software
-Atom, CLI, CS, iOS SDK, MAMP, VMware
+VS Code, CLI, iOS SDK, Docker
 
+### Senior Front-End Web Developer
+_Sears Holdings Hoffman Estates, IL (2010-2012)_
+
+Joined User Experience group as a web developer working on Social Profile and Local Marketplace.  Asked to lead a team (4) developing special projects and homepages for Sears, Kmart, and MyGopher.
+
+- Managed workflow and deliverables of 30 plus concurrent special promotions to meet sales initiatives
+- Worked with team members to work on challenging projects that led to skill growth and advancement
+- Created JS application that allowed marketers to create custom Holiday Promotions Collections of products
+
+#### Technologies/Coding
+CSS, HTML, jQuery/Javascript, Rest API XHTML
+
+#### Software
+Accelerator, CLI, CS5, SVN, VMware, WebSphere
 
 ### Senior Developer/Owner
-_LimeTreeMedia (2005-Present)_
+_LimeTreeMedia (2005-2014)_
 
 - Developed sales network of clientele for print, web and video creative services.
 - Created custom Content Management Systems (CMS) to allow clients online editing and development access including hierarchy admin control schemas.
@@ -53,32 +72,12 @@ ASP, ActionScript, CSS, HTML, Javascript, JSP, jQueryGit, Gulp, Node, MySQL, PHP
 #### Software
 Atom, CLI, CS, iOS SDK, MAMP, SVN, Studio HD, VMware
 
-
-### Senior Front-End Web Developer
-_Sears Holdings Hoffman Estates, IL (2010-2012)_
-
-- Developed Social Profile and Local Marketplace sections of Sears.com that transpire to all other Sears owned sites.
-- Managed a team of FED’s and developed best practices and methods for deliverables.
-- Streamlined production flow and scalability of SVN stored HTML and CSS components.
-- Developed custom JQuery components for generic manipulation and cross-site usage.
-- Rewrote Flash components in HTML, CSS3 and JQuery to allow greater access among non-flash supported devices.
-- Developed browser degradation production flow to minimize load times using CSS3 and JQuery.
-- Created several custom AJAX XML parsers for pulling data and building dynamic menu systems.
-
-#### Technologies/Coding
-CSS, HTML, jQuery/Javascript, XHTML
-
-#### Software
-Accelerator, CLI, CS5, SVN, VMware
-
-
 ### Front-End Web Developer
 _Leapfrog Online (contract) Evanston, IL (2008-2010)_
 
-- Launched online pay-per-click portals/microsites for leading cable providers utilizing customized CMS development.
-- Streamlined CMS template structure including templates to allow maintainability, proper sharing and web compliant coding.
-- Developed customized logic solutions in Django/Python/YAML environments.
-- Created JQuery controlled order selection chart for parsed JSON data.
+- Created front end application pay-per-click portals/microsites for leading cable providers utilizing customized CMS development.
+- Streamlined CMS templates creating reusable components
+- Created custom JS applications with APIs resulting in increased application performance
 
 #### Technologies/Coding
 CSS, Django, Jinja, JQuery/Javascript, Python, XHTML, YAML
@@ -104,12 +103,11 @@ CS
 ### Interactive Project Manager
 _Harpo/Oprah.com (contract) Chicago, IL (2007-2008)_
 
-- Developed project structure for redesign of Oprah.com
-- Developed teams of designers and front-end developers.
-- Created objectives and project implementation plan for the graphic development of the new site architecture page development while directing design for brand coherence.
-- Produced solutions to design structure and coding development problems.
-- Trouble shoot technology solutions to attain best web and user flow experience while minimizing site load time and server traffic.
-- Developed page structure of multiple overlaying transparent graphic elements for cross-browser support and delivery.
+Managed teams during transition of static Oprah.com website to dynamic with media and data repositories.
+
+- Managed team (6) of design and front end development
+- Created objectives and project implementation plans that segmented  project into deliverables with milestones
+- Produced technical solutions for design vision
 
 #### Technologies/Coding
 ActionScript, CSS, HTML JQuery/Javascript
